@@ -1,0 +1,10 @@
+# Backup e Recovery
+
+## Backup simples
+mysqldump -u root -p ecommerce > ecommerce_backup.sql
+
+## Backup completo
+mysqldump -u root -p --routines --triggers --events ecommerce > ecommerce_full_backup.sql
+
+## Restore
+mysql -u root -p ecommerce < ecommerce_backup.sql
